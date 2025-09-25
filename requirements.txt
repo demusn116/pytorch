@@ -1,3 +1,4 @@
+HEAD
 # Python dependencies required for development
 
 # Build System requirements
@@ -17,3 +18,9 @@ psutil
 sympy>=1.13.3
 typing-extensions>=4.13.2
 wheel
+
+transformers
+torch
+gradio
+# flask  # not needed if using Gradio UI; add if you prefer Flask webserver
+ 024f5baaa8 (Add Erebus files)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![PyTorch Logo](https://github.com/pytorch/pytorch/blob/9708fcf92db88b80b9010c68662d634434da3106/docs/source/_static/img/pytorch-logo-dark.png)
 
 --------------------------------------------------------------------------------
@@ -567,3 +568,11 @@ Note: This project is unrelated to [hughperkins/pytorch](https://github.com/hugh
 ## License
 
 PyTorch has a BSD-style license, as found in the [LICENSE](LICENSE) file.
+
+# Erebus AI  
+Erebus is a custom language model experiment built with Hugging Face Transformers.  
+
+## Running Locally
+bash
+python chat_light.py
+ 024f5baaa8 (Add Erebus files)

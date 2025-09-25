@@ -1,3 +1,4 @@
+ HEAD
 # syntax=docker/dockerfile:1
 
 # NOTE: Building this image require's docker version >= 23.0.
@@ -99,3 +100,29 @@ FROM official as dev
 # Should override the already installed version from the official-image stage
 COPY --from=conda /opt/conda /opt/conda
 COPY --from=submodule-update /opt/pytorch /opt/pytorch
+
+# Base image with Python
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements (if you have a requirements.txt)
+COPY requirements.txt .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy your inference script and model files
+COPY chat_interface.py .
+COPY erebus_model ./erebus_model
+COPY erebus_tokenizer ./erebus_tokenizer
+
+# Expose port if running a web server (optional)
+EXPOSE 5000
+
+# Command to run the script
+CMD ["python", "chat_interface.py"]
+docker build -t erebus-app .
+docker run -p 5000:5000 erebus-api
+ 024f5baaa8 (Add Erebus files)
