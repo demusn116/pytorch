@@ -1,3 +1,4 @@
+HEAD
 # READ THIS BEFORE YOU REFACTOR ME
 #
 # setup.py uses the list of patterns in this file to decide
@@ -395,4 +396,6 @@ android/pytorch_android_torchvision/.cxx
 CLAUDE.local.md
 /test_*.py
 /debug_*.py
+
+ c86c1bd42b (Ignore Vim swap files)
 *.swp
