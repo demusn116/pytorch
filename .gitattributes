@@ -6,3 +6,4 @@
 third_party/LICENSES_BUNDLED.txt linguist-generated=true
 tools/build/bazel/requirements.txt linguist-generated=true
 torch/csrc/utils/generated_serialization_types.h linguist-generated=true
+erebus_model/model.safetensors filter=lfs diff=lfs merge=lfs -text
